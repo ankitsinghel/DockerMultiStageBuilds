@@ -14,11 +14,10 @@ app.get("/health", (_req: Request, res: Response) => {
   res.json({ status: "ok" });
 });
 
-if (process.env.NODE_ENV !== "test") {
+
   app.listen(port, () => {
     // eslint-disable-next-line no-console
     console.log(`Server listening at http://localhost:${port}`);
   });
-}
 
 export default app;

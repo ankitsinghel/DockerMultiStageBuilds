@@ -8,11 +8,9 @@ app.get("/", (_req, res) => {
 app.get("/health", (_req, res) => {
     res.json({ status: "ok" });
 });
-if (require.main === module) {
-    app.listen(port, () => {
-        // eslint-disable-next-line no-console
-        console.log(`Server listening at http://localhost:${port}`);
-    });
-}
+app.listen(port, () => {
+    // eslint-disable-next-line no-console
+    console.log(`Server listening at http://localhost:${port}`);
+});
 export default app;
 //# sourceMappingURL=index.js.map
