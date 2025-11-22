@@ -42,3 +42,5 @@ COPY --from=builder /home/build/dist dist/
 RUN npm install --omit=dev
 
 CMD ["npm", "start"]
+
+EXPOSE 3000
