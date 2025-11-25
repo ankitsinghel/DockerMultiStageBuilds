@@ -2,11 +2,11 @@ name: tsapp
 services:
   myapp:
     build:
-      context: .
-      dockerfile: dockerfile
+      context: .             # Use current directory as build context
+      dockerfile: dockerfile # Dockerfile used to build the app image
     container_name: myapp
     ports:
-      - "8080:3000"
+      - "8080:3000" # Expose app on host: 8080 → container: 3000
   db:
     image: postgres:16
     container_name: postgres
